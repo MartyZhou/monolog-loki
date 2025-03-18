@@ -14,10 +14,11 @@ use Itspire\MonologLoki\Formatter\LokiFormatter;
 use Monolog\Formatter\FormatterInterface;
 use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Handler\Curl;
+use Monolog\Handler\HandlerInterface;
 use Monolog\Level;
 use Monolog\LogRecord;
 
-class LokiHandler extends AbstractProcessingHandler
+class LokiHandler extends AbstractProcessingHandler implements HandlerInterface
 {
     /** the scheme, hostname and port to the Loki system */
     protected ?string $entrypoint;
