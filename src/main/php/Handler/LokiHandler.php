@@ -121,8 +121,8 @@ class LokiHandler extends AbstractProcessingHandler implements HandlerInterface
         if (false !== $this->connection) {
             $curlOptions = array_replace(
                 [
-                    CURLOPT_CONNECTTIMEOUT_MS => 100,
-                    CURLOPT_TIMEOUT_MS => 200,
+                    CURLOPT_CONNECTTIMEOUT_MS => 1000,
+                    CURLOPT_TIMEOUT_MS => 2000,
                     CURLOPT_CUSTOMREQUEST => 'POST',
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_POSTFIELDS => $payload,
@@ -149,7 +149,7 @@ class LokiHandler extends AbstractProcessingHandler implements HandlerInterface
             // too many retries attempts cause some processes to hang,
             // awaiting retries results so we limit to one attempt.
             // Note :  Loki is a network related logging system ! It should not be the only logging system relied on.
-            Curl\Util::execute($this->connection, 1, false);
+            Curl\Util::execute($this->connection, 5, false);
         }
     }
 
