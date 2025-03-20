@@ -1,5 +1,5 @@
 {
-  "name": "martyzhou/monolog-loki",
+  "name": "octoobservo/monolog-loki",
   "type": "library",
   "description": "Monolog handler for Grafana Loki",
   "license": "BSD-3-Clause",
