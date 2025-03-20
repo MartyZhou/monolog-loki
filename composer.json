@@ -16,7 +16,7 @@
   },
   "require": {
     "php": "~8.1",
-    "monolog/monolog": "~3.0"
+    "octoobservo/monolog": "^1.0"
   },
   "require-dev": {
     "ext-json": "*",
@@ -34,5 +34,10 @@
     "psr-4": {
       "Itspire\\MonologLoki\\Test\\": "src/test/php"
     }
-  }
+  },
+  "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/octoobservo/monolog"
+    }]
 }
