@@ -121,8 +121,8 @@ class LokiHandler extends AbstractProcessingHandler implements HandlerInterface
         if (false !== $this->connection) {
             $curlOptions = array_replace(
                 [
-                    CURLOPT_CONNECTTIMEOUT_MS => 1000,
-                    CURLOPT_TIMEOUT_MS => 2000,
+                    CURLOPT_CONNECTTIMEOUT_MS => 30,
+                    CURLOPT_TIMEOUT_MS => 60,
                     CURLOPT_CUSTOMREQUEST => 'POST',
                     CURLOPT_RETURNTRANSFER => true,
                     CURLOPT_POSTFIELDS => $payload,
